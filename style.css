@@ -1,0 +1,101 @@
+*{
+ box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lobster+Two' , sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: steelblue;
+    overflow: hidden;
+}
+
+.container{
+    position: relative;
+    background: rgba(0,0,0,0.3);
+    padding: 60px 40px;
+    border-radius: 5px;
+}
+
+.container h1{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.container .input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #fff;
+    display: block;
+    width: 100%;
+    margin-bottom: 50px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.container .input:focus,
+.container .input:valid{
+    color: #fff;
+    outline: none;
+    font-size: 18px;
+    border-bottom-color:lightblue;
+}
+.container .login{
+    width: 100%;
+    background-color: steelblue;
+    border: 0;
+    border-radius: 3px;
+    padding: 8px 10px;
+    font-size: 18px;
+    color: #fff;
+    margin: 30px 0;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container .login:active{
+    transform:scale(0.9)
+}
+
+.container .mail{
+    position: relative;
+}
+
+.container .lable{
+    font-size: 18px;
+    color: #fff;
+    position: absolute;
+    top: 1px;
+    left: 0;
+}
+
+.container .footer{
+    color: #fff;
+    font-size: 18px;
+}
+
+.container .footer a{
+    color: lightblue;
+    font-size: 18px;
+    text-decoration: none;
+
+}
+.container .footer a:active{
+    color: darkblue;
+}
+
+.lable span{
+    display: inline-block;
+    min-width: 5px;
+    transition: 0.5s cubic-bezier(0.66, -0.55, 0.265, 1.55);
+}
+
+.mail .input:focus + .lable span,
+.mail .input:valid + .lable span{
+    color: lightblue;
+    transform: translateY(-30px);
+}
